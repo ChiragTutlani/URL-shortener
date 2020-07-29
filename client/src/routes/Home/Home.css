@@ -1,0 +1,15 @@
+.home {
+  background-color: #253341;
+  min-height: 100vh;
+}
+
+.home-container {
+  background-color: #f8f7f5;
+  border-radius: 7px;
+  min-height: calc(100vh - 60px);
+}
+
+.home.loader-container {
+  height: calc(100vh - 60px);
+  width: 100vw;
+}

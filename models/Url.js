@@ -22,8 +22,8 @@ const Url = mongoose.Schema({
     default: 0,
   },
   createdAt: {
-    type: Date,
-    default: Date.now(),
+    type: String,
+    default: new Date().toString(),
     immutable: true,
   },
   userId: {

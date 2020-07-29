@@ -27,9 +27,14 @@ exports.createUser = async (req, res) => {
 
     sendTokenResponse(user, 200, res);
   } catch (err) {
-    res.status(400).json({
+    let message = "";
+    if (err.code === 11000) {
+      message = "Email already exist";
+    }
+    res.status(500).json({
       success: false,
-      error: err,
+      error:
+        message === "" ? "Problem occurred. Please try again later." : message,
     });
   }
 };
@@ -45,7 +50,6 @@ exports.getCurrentUser = async (req, res) => {
       data: user,
     });
   } catch (error) {
-    console.log(error);
     res.status(500).json({
       success: false,
       error: error,

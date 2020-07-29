@@ -24,7 +24,7 @@ const User = mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now(),
+    default: new Date().toString(),
     immutable: true,
   },
   urlId: [

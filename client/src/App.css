@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+:root {
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.link,
+.link:hover {
+  text-decoration: none;
+}
+
+.required-symbol {
+  color: red;
+}
+
+.white-text,
+.white-text:hover {
+  color: white;
+}

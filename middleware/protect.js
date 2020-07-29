@@ -22,7 +22,14 @@ const protect = async (req, res, next) => {
     req.user = user;
     next();
   } catch (err) {
-    res.status(401).json({
+    const options = {
+      expires: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // 2 days,
+      httpOnly: true,
+    };
+    if (process.env.NODE_ENV === "production") {
+      options.secure = true;
+    }
+    res.status(401).clearCookie("token", options).json({
       success: false,
       error: "Unauthorized request",
     });

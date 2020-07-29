@@ -1,0 +1,10 @@
+.signup {
+  background-color: #253341;
+  min-height: 100vh;
+}
+
+.signup-container {
+  background-color: #f8f7f5;
+  width: 25%;
+  border-radius: 7px;
+}

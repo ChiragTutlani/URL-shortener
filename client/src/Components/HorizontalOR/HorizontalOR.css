@@ -1,0 +1,15 @@
+.horizontal-or {
+  margin: 20px 0;
+}
+
+.horizontal-or span {
+  content: "";
+  background-color: grey;
+  height: 1px;
+  width: 40%;
+}
+
+.horizontal-or p {
+  margin: 0;
+  color: grey;
+}

@@ -26,7 +26,7 @@ exports.createUrl = async (req, res) => {
     const urlCode = shortid.generate();
 
     req.body.urlCode = urlCode;
-    req.body.shortUrl = process.env.BASE_URL + urlCode;
+    req.body.shortUrl = process.env.BASE_URL + "/" + urlCode;
     req.body.userId = req.user._id;
 
     const url = await Url.create(req.body);

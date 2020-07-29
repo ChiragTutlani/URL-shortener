@@ -1,0 +1,47 @@
+.url-box {
+  background-color: white;
+  width: 80%;
+  margin: 30px auto;
+  padding: 2em 1em;
+  box-shadow: 3px 3px 2px #253341, -3px -3px 2px #253341;
+  border-radius: 4px;
+}
+
+.url-box a {
+  color: #f8f7f5;
+  text-decoration: none;
+}
+
+.url-box a:hover {
+  color: #f8f7f5;
+  text-decoration: underline;
+}
+
+.url-box .short-url {
+  background-color: #253341;
+  border: 3px solid #253341;
+  border-radius: 3px;
+  padding: 1em 0.5em;
+  color: #f8f7f5;
+  font-weight: 600;
+}
+
+.url-box .original-url {
+  padding: 0 1em;
+  font-weight: 500;
+  color: #253341;
+}
+
+.url-box .url-details {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 0 1em;
+}
+
+@media (max-width: 500px) {
+  .url-box .url-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1em;
+  }
+}
